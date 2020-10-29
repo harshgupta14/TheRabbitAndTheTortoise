@@ -30,6 +30,17 @@ public class Tortoise extends Thread {
                     System.out.println("The Tortoise has reached the finish line!");
                     break;
             }
+            try {
+                Thread.sleep(3000L);
+            } catch (InterruptedException e) {
+                System.err.println("The Tortoise has loose the race");
+            }
         }
+        JOptionPane.showConfirmDialog(
+                null,
+                "The Tortoise has completed the race!",
+                "Tortoise",
+                JOptionPane.OK_CANCEL_OPTION
+        );
     }
 }
